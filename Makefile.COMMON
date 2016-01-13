@@ -92,6 +92,7 @@ dependencies-stamp: $(GOCC) $(SRC) | $(SELFLINK)
 	touch $@
 
 $(BINARY): $(GOCC) $(SRC) dependencies-stamp Makefile Makefile.COMMON
+	$(GO) get -d
 	$(GO) build $(GOFLAGS) -o $@
 
 .PHONY: archive
