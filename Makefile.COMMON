@@ -79,7 +79,6 @@ $(GOCC):
 	@echo About to download and install go$(GO_VERSION) to $(GOROOT)
 	@echo Abort now if you want to manually install it system-wide instead.
 	@echo
-	@sleep 5
 	mkdir -p $(GOROOT)
 	curl -L $(GOURL)/$(GOPKG) | tar -C $(GOROOT) --strip 1 -xz
 
